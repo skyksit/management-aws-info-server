@@ -1,0 +1,7 @@
+Application: management
+Service: aws
+Environment: ${self:provider.stage}
+Role: service
+Team: easyshopping
+User: 김병철
+Owner: 김병철

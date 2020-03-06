@@ -1,0 +1,6 @@
+defaultRegion: ap-northeast-2
+logRetentionInDays: 14
+deployBucket: nsm-${self:provider.stage}-serverless-bucket
+tracing:
+  apiGateway: true
+  lambda: true
