@@ -1,0 +1,28 @@
+{
+  "name": "management-aws-info-server",
+  "version": "0.1.0",
+  "description": "aws resource management",
+  "main": "handler.js",
+  "dependencies": {
+    "bunyan": "^1.8.12"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.636.0",
+    "mocha": "^7.1.0",
+    "nyc": "^15.0.0",
+    "serverless-offline": "^5.12.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skyksit/management-aws-info-server.git"
+  },
+  "author": "skyksit@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skyksit/management-aws-info-server/issues"
+  },
+  "homepage": "https://github.com/skyksit/management-aws-info-server#readme"
+}

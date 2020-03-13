@@ -18,5 +18,12 @@ provider:
   tags: ${file(config/tags.${self:provider.stage}.yml)}
 
 functions:
-  hello:
-    handler: handler.hello
+  listUsers:
+    handler: src/iam/handler.listUsers
+    events:
+      - http:
+          path: iam/list
+          method: get
+
+plugins:
+  - serverless-offline
