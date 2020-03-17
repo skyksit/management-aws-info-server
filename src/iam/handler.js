@@ -10,14 +10,19 @@ const successStatus = withStatusCode(200, JSON.stringify);
 const failStatus = withStatusCode(500, JSON.stringify);
 
 module.exports.listUsers = async event => {
-  
+  let usersResult;
+
   const users = new Users(accountIam);
-
-  let userList = await users.listUsers();
-
-  log.info( { users : userList }, 'User Count...');
-
+  try {
+    usersResult = await users.listUsers();
+  }
+  catch (err) {
+    failStatus({
+      Data: err
+    });
+  }
+  
   return successStatus({
-    Data: userList
+    Data: usersResult
   });
 };

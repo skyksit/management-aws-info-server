@@ -22,8 +22,9 @@ functions:
     handler: src/iam/handler.listUsers
     events:
       - http:
-          path: iam/list
+          path: iam/users
           method: get
 
 plugins:
   - serverless-offline
+  - serverless-mocha-plugin
